@@ -1,0 +1,95 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Weather App Project</title>
+    <style></style>
+    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/css/bootstrap.min.css"
+        integrity="sha384-JcKb8q3iqJ61gNV9KGb8thSsNjpSL0n8PARn9HuZOnIxN0hoP+VmmDGMN5t9UJ0Z" crossorigin="anonymous" />
+    <link href="https://fonts.googleapis.com/css2?family=Fjalla+One&display=swap" rel="stylesheet" />
+    <script src="https://kit.fontawesome.com/8ba14de806.js" crossorigin="anonymous"></script>
+    <script src="https://unpkg.com/axios/dist/axios.min.js"></script>
+    <link rel="stylesheet" href="src/styles.css" />
+</head>
+
+<body>
+    <section class="main-container">
+        <form class="search-form">
+            <input type="search" class="form-control" id="city-input" placeholder="Please Enter a City..."
+                autofocus="on" autocomplete="off" />
+            <input type="submit" class="form-button" id="location-button" value="Get Forecast" />
+        </form>
+        <button type="button" class="button" id="current-location-btn">
+            Current Location
+        </button>
+        <h1 id="current-city">Atlanta, Georgia</h1>
+        <span class="subheader"><small>
+                <span class="subheader" id="current-date">Thursday, 8/20/20</span>
+                <span class="subheader" id="current-time">3:20PM ET</span>
+            </small></span>
+        <i class="fas fa-cloud-sun"></i>
+        <h2>
+            <span class="current-temp">68</span>
+            <span class="temp-units">
+                <a href="#" id="far-temp">°F</a>
+                <space class="pipe">|
+            </span>
+            <span class="temp-units"><a href="#" id="cels-temp">°C</a>
+            </span>
+        </h2>
+        <ul class="precipitation" id>
+            <li id="description">
+                Cloudy
+            </li>
+            <li id="humidity">
+                30% humidity
+            </li>
+            <li id="wind">
+                7mph wind
+            </li>
+        </ul>
+        <div class="forecast">5-Day Forecast</div>
+        <div class="container">
+            <div class="row">
+                <div class="col-sm">
+                    8/21<br />
+                    <i class="fas fa-sun"></i>
+                    <br />
+                    <span class="temp"> 77° / 68°</span>
+                </div>
+                <div class="col-sm">
+                    8/22<br />
+                    <i class="fas fa-cloud-rain"></i>
+                    <br />
+                    <span class="temp">79° / 70°</span>
+                </div>
+                <div class="col-sm">
+                    8/23 <br />
+                    <i class="fas fa-sun"></i>
+                    <br />
+                    <span class="temp"> 74° / 67°</span>
+                </div>
+                <div class="col-sm">
+                    8/24<br />
+                    <i class="fas fa-bolt"></i>
+                    <br />
+                    <span class="temp"> 67° / 62°</span>
+                </div>
+                <div class="col-sm">
+                    8/25<br />
+                    <i class="fas fa-sun"></i>
+                    <br />
+                    <span class="temp"> 71° / 68°</span>
+                </div>
+            </div>
+        </div>
+    </section>
+    <container class="footer">
+        <p id="signature">👩🏻 Coded by Anne Marie Robson</p>
+    </container>
+    <script src="src/index.js"></script>
+</body>
+
+</html>
