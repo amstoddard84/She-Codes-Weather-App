@@ -41,6 +41,7 @@ h2 {
   position: relative;
   top: -280px;
   left: 225px;
+  font-family: "Fjalla One", sans-serif;
   color: #16213e;
   font-size: 40px;
   font-weight: bold;
@@ -121,29 +122,31 @@ h2 {
 .container {
   display: block;
   background: aliceblue;
-  width: 500px;
+  width: px;
+  height: 115px;
+  padding-top: 5px;
   border-radius: 10px;
-  margin-right: auto;
-  margin-left: auto;
+  margin: 0 auto;
   position: relative;
   top: -210px;
   text-align: center;
 }
-.col-sm {
-  font-size: 24px;
+
+.col-2 {
+  display: block;
+  padding: 10px;
+  margin-left: 15px;
+}
+
+.forecast-time {
+  display: block;
+  font-size: 20px;
   font-weight: 600;
+  text-align: center;
 }
-.fa-sun {
-  color: #eebb4d;
-}
-.fa-cloud-rain {
-  color: #3282b8;
-}
-.fa-bolt {
-  color: #222831;
-}
+
 .temp {
-  font-size: 16px;
+  font-size: 14px;
   color: #52575d;
   font-weight: lighter;
 }
