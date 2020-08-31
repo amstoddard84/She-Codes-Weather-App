@@ -34,13 +34,20 @@ let date = document.querySelector("#current-date");
 let time = document.querySelector("#current-time");
 
 date.innerHTML = `${currentDay}, ${currentMonth} ${currentDate}, ${fullDate.getFullYear()}`;
-time.innerHTML = `${hour}:${minute}`;
+time.innerHTML = fullDate.toLocaleString("en-US", {
+  hour: "numeric",
+  minute: "numeric",
+  hour12: true,
+});
 
 function displayWeather(response) {
   document.querySelector("h1").innerHTML = response.data.name;
   document.querySelector(".current-temp").innerHTML = Math.round(
     response.data.main.temp
   );
+  document.querySelector(
+    "#precipitation"
+  ).innerHTML = `${response.data.main.humidity}% precipitation`;
   document.querySelector(
     "#humidity"
   ).innerHTML = `${response.data.main.humidity}% humidity`;
@@ -79,7 +86,7 @@ function getCurrentLocation(event) {
 function tempConvertCels(event) {
   event.preventDefault();
   let tempElement = document.querySelector(".current-temp");
-  tempElement.innerHTML = `${Math.round(((currentTemperature - 32) * 5) / 9)}`;
+  tempElement.innerHTML = `${Math.round(((currentTemperature - 30) * 5) / 9)}`;
 }
 
 function tempConvertFar(event) {

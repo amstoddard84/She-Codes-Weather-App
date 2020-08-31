@@ -81,15 +81,25 @@ h2 {
   font-style: italic;
 }
 
-.precipitation {
+#description {
+  display: block;
+  padding-top: 0;
+  font-family: Cerebri Sans, Helvetica, Arial, sans-serif;
+  color: #393b44;
+  font-weight: bold;
+  font-style: italic;
+}
+
+.details {
   list-style: none;
   display: inline;
   position: relative;
   top: -200px;
   left: 150px;
+  font-size: 14px;
   color: #393b44;
   margin: auto;
-  font-weight: bolder;
+  font-weight: bold;
 }
 
 .fa-cloud-sun {
