@@ -46,18 +46,18 @@ function displayWeather(response) {
   );
   document.querySelector(
     "#precipitation"
-  ).innerHTML = `${response.data.main.humidity}% precipitation`;
+  ).innerHTML = `Precipitation: ${response.data.main.humidity}%`;
   document.querySelector(
     "#humidity"
-  ).innerHTML = `${response.data.main.humidity}% humidity`;
-  document.querySelector("#wind").innerHTML = `${Math.round(
+  ).innerHTML = `Humidity: ${response.data.main.humidity}%`;
+  document.querySelector("#wind").innerHTML = `Wind speed: ${Math.round(
     response.data.wind.speed
-  )} mph wind`;
+  )} mph`;
   document.querySelector("#description").innerHTML =
     response.data.weather[0].main;
   iconElement.setAttribute(
     "src",
-    `https://openweathermap.org/img/wn/${response.data.weather[0].icon}@2x.png`
+    `http://openweathermap.org/img/wn/${response.data.weather[0].icon}@2x.png`
   );
   iconElement.setAttribute("alt", response.data.weather[0].description);
 }
@@ -87,7 +87,7 @@ function displayForecast(response) {
 <div class="col-2">
 <h4 class="forecast-time">${formatHours(forecast.dt * 1000)}</h4>
 <img 
-src="https://openweathermap.org/img/wn/${forecast.weather[0].icon}@2x.png"
+src="http://openweathermap.org/img/wn/${forecast.weather[0].icon}@2x.png"
 />
 <span class="temp">${Math.round(forecast.main.temp_max)}° | ${Math.round(
       forecast.main.temp_min
