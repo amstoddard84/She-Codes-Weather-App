@@ -40,7 +40,7 @@ h2 {
   padding: 0;
   position: relative;
   top: -280px;
-  left: 225px;
+  left: 275px;
   font-family: "Fjalla One", sans-serif;
   color: #16213e;
   font-size: 40px;
@@ -49,7 +49,7 @@ h2 {
 
 #far-temp {
   font-size: 20px;
-  color: 16213e;
+  color: #16213e;
 }
 
 .pipe {
@@ -66,9 +66,9 @@ h2 {
 .main-container {
   display: block;
   margin: 0 auto;
-  width: 600px;
-  height: 570px;
-  padding: 30px;
+  width: 750px;
+  height: 600px;
+  padding: 35px;
   background-image: linear-gradient(45deg, #93a5cf 0%, #e4efe9 100%);
   border-radius: 10%;
 }
@@ -86,7 +86,7 @@ h2 {
   display: block;
   position: relative;
   top: -20px;
-  left: 445px;
+  left: 550px;
   padding-top: 0;
   font-family: Cerebri Sans, Helvetica, Arial, sans-serif;
   color: #393b44;
@@ -99,7 +99,7 @@ h2 {
   display: inline;
   position: relative;
   top: -300px;
-  left: 225px;
+  left: 275px;
   font-size: 14px;
   color: #393b44;
   margin: auto;
@@ -111,7 +111,7 @@ h2 {
   display: inline;
   position: relative;
   top: -170px;
-  left: 400px;
+  left: 500px;
   padding: 35px 20px;
 }
 .five-hour-forecast {
@@ -121,24 +121,24 @@ h2 {
   font-weight: 900;
   position: relative;
   top: -250px;
-  left: 150px;
+  left: 220px;
 }
 .container {
   display: block;
-  background: aliceblue;
-  width: px;
-  height: 115px;
-  padding-top: 5px;
+  background: rgb(204, 222, 238);
+  width: 690px;
+  height: 190px;
+  padding-top: 20px;
   border-radius: 10px;
   margin: 0 auto;
   position: relative;
-  top: -210px;
+  top: -240px;
   text-align: center;
 }
 
 .col-2 {
   display: block;
-  padding: 10px;
+  padding: px;
   margin-left: 15px;
 }
 
@@ -150,9 +150,15 @@ h2 {
 }
 
 .temp {
+  display: block;
   font-size: 14px;
   color: #52575d;
-  font-weight: lighter;
+  font-weight: bold;
+}
+
+#forecast-icon {
+  display: block;
+  padding: 0;
 }
 
 .footer {

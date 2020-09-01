@@ -44,6 +44,8 @@ function displayWeather(response) {
   document.querySelector(".current-temp").innerHTML = Math.round(
     response.data.main.temp
   );
+  currentTemperature = Math.round(response.data.main.temp);
+
   document.querySelector(
     "#precipitation"
   ).innerHTML = `Precipitation: ${response.data.main.humidity}%`;
@@ -81,7 +83,7 @@ function displayForecast(response) {
   forecastElement.innerHTML = null;
   let forecast = null;
 
-  for (let index = 0; index < 6; index++) {
+  for (let index = 0; index < 5; index++) {
     forecast = response.data.list[index];
     forecastElement.innerHTML += `
 <div class="col-2">
@@ -93,8 +95,6 @@ src="http://openweathermap.org/img/wn/${forecast.weather[0].icon}@2x.png"
       forecast.main.temp_min
     )}°
       </span>
-</div>     
-</div>
 </div>`;
   }
 }
@@ -104,6 +104,8 @@ function searchCity(city) {
   let units = "imperial";
   let apiUrl = `https://api.openweathermap.org/data/2.5/weather?q=${city}&appid=${apiKey}&units=${units}`;
   axios.get(apiUrl).then(displayWeather);
+
+  apiUrl = `https://api.openweathermap.org/data/2.5/forecast?q=${city}&appid=${apiKey}&units=${units}`;
   axios.get(apiUrl).then(displayForecast);
 }
 
